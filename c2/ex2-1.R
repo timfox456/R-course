@@ -3,7 +3,7 @@
 #a. 
 # when a = 2.3.
 # Using R, verify that
-#(6a + 42)/(3^(34.2-3.62)) = 29.50556
+#(6a + 42)/(3^(4.2-3.62)) = 29.50556
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-# f. Identify R’s representation of −0.00000000423546322 when printing this number to the console.
+# f. Identify R’s representation of -0.00000000423546322 when printing this number to the console.
 
 
 
