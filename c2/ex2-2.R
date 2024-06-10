@@ -1,7 +1,7 @@
 
 # Exercise 2-2
 
-# a. Create an object that stores the value 32 * 41/8.
+# a. Create an object that stores the value 3^2 * 4^(1/8).
 
 # b. Overwrite your object in (a) by itself divided by 2.33. Print the
 # result to the console.
