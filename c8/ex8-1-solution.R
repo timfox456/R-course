@@ -28,12 +28,9 @@ q5.dframe <- read.table(file="q5.txt",sep="!",header=T)
 # following:
 
 #(b)
-install.packages("car")
-library("car")
-data(Duncan)
+Duncan = read.csv("duncan.csv")
 
 # i. Write R code that will plot education on the x-axis and income on the
-
 # y-axis, with both x- and y-axis limits fixed to be [0,100].
 
 # Provide appropriate axis labels. For jobs with a prestige value of less than

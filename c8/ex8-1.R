@@ -13,10 +13,14 @@
 
 # ii. Read the file back into your R workspace, naming the object q5.dframe.
 
-# b. In the contributed package car, there’s a data frame called Duncan, which
+# b. Originally the lab had you install the package car, however that is problematic
+# so instead of doing that, let us load the Duncan file duncan.csv. We will load it into
+# a data frame called Duncan, which
 # provides historical data on perceived job prestige in 1950. Install the car
 # package and access the Duncan data set and its help file. Then, do the
 # following:
+
+Duncan = read.csv("duncan.csv")
 
 # i. Write R code that will plot education on the x-axis and income on the
 # y-axis, with both x- and y-axis limits fixed to be [0,100].
