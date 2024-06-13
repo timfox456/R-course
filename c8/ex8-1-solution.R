@@ -22,12 +22,9 @@ write.table(x=quakes[quakes$mag>=5,],file="q5.txt",sep="!",row.names=F)
 ##(ii)
 q5.dframe <- read.table(file="q5.txt",sep="!",header=T)
 
-# b. In the contributed package car, there’s a data frame called Duncan, which
-# provides historical data on perceived job prestige in 1950. Install the car
-# package and access the Duncan data set and its help file. Then, do the
-# following:
+# b. We are no longer using the package car. We are loading a data frame called Duncan, which
+# provides historical data on perceived job prestige in 1950.
 
-#(b)
 Duncan = read.csv("duncan.csv")
 
 # i. Write R code that will plot education on the x-axis and income on the
