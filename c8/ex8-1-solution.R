@@ -16,11 +16,11 @@
 
 #(a)
 ##(i)
-write.table(x=quakes[quakes$mag>=5,],file="/Users/tdavies/q5.txt",sep="!",row.names=F)
+write.table(x=quakes[quakes$mag>=5,],file="q5.txt",sep="!",row.names=F)
 
 # ii. Read the file back into your R workspace, naming the object q5.dframe.
 ##(ii)
-q5.dframe <- read.table(file="/Users/tdavies/q5.txt",sep="!",header=T)
+q5.dframe <- read.table(file="q5.txt",sep="!",header=T)
 
 # b. In the contributed package car, there’s a data frame called Duncan, which
 # provides historical data on perceived job prestige in 1950. Install the car
@@ -47,7 +47,7 @@ points(Duncan$education[Duncan$prestige>80],Duncan$income[Duncan$prestige>80],pc
 # ii. Add a legend explaining the difference between the two types of points
 # and then save a 500 × 500 pixel .png file of the image.
 
-png("/Users/tdavies/dunc.png",width=500,height=500)
+png("dunc.png",width=500,height=500)
 plot(Duncan$education[Duncan$prestige<=80],Duncan$income[Duncan$prestige<=80],xlim=c(0,100),ylim=c(0,100),xlab="Education",ylab="Income")
 points(Duncan$education[Duncan$prestige>80],Duncan$income[Duncan$prestige>80],pch=19,col="blue")
 legend("topleft",legend=c("prestige > 80","prestige <= 80"),pch=c(19,1),col=c("blue","black"))
@@ -60,13 +60,13 @@ exer <- list(quakes,q5.dframe,Duncan)
 # i. Write the list object directly to disk, calling it Exercise8-1.txt.
 # Briefly inspect the contents of the file in a text editor.
 
-dput(x=exer,file="/Users/tdavies/Exercise8-1Data.txt")
+dput(x=exer,file="Exercise8-1Data.txt")
 
 # ii. Read Exercise8-1.txt back into your workspace; call the resulting object
 # list.of.dataframes. Check that list.of.dataframes does indeed
 # contain the three data frame objects.
 
-list.of.dataframes <- dget("/Users/tdavies/Exercise8-1Data.txt")
+list.of.dataframes <- dget("Exercise8-1Data.txt")
 list.of.dataframes
 
 # d. In Section 7.4.3, you created a ggplot2 graphic of 20 observations
@@ -81,7 +81,7 @@ ptype[(x>=5&x<=15)&(y>-5&y<5)] <- "sweet"
 ptype[(x<5|x>15)&(y>-5&y<5)] <- "standard"
 ptype <- factor(x=ptype)
 qplot(x,y,color=ptype,shape=ptype) + geom_point(size=4) + geom_line(mapping=aes(group=1),color="black",lty=2) + geom_hline(mapping=aes(yintercept=c(-5,5)),color="red") + geom_segment(mapping=aes(x=5,y=-5,xend=5,yend=5),color="red",lty=3) + geom_segment(mapping=aes(x=15,y=-5,xend=15,yend=5),color="red",lty=3)
-ggsave(filename="/Users/tdavies/elaborateqplot.tiff")
+ggsave(filename="elaborateqplot.tiff")
 
 
 
