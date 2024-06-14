@@ -11,15 +11,6 @@
 # the following calls:
 
 
-# 10-4 factorial while loop
-mynum.fac <- 1
-while(mynum>1){
-  mynum.fac <- mynum.fac*mynum
-  mynum <- mynum-1
-}
-mynum.fac
-## end code
-
 
 #write the following:
 
@@ -36,6 +27,16 @@ myfib4(1000000,printme=F)
 
 # b. In Exercise 10.4 on page 203, you were tasked with writing a while loop to
 # perform integer factorial calculations.
+# 10-4 factorial while loop
+
+mynum.fac <- 1
+while(mynum>1){
+  mynum.fac <- mynum.fac*mynum
+  mynum <- mynum-1
+}
+mynum.fac
+## end code
+
 
 # i. Using your factorial while loop (or writing one if you didn’t do so
 # earlier), write your own R function, myfac, to compute the factorial of an
