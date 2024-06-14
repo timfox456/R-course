@@ -1,0 +1,22 @@
+# ex 13-2
+
+a. Obtain, rounded to two decimal places, the proportion of seis- mic events in the quakes data frame that occurred at a depth of 300 km or deeper.
+
+b. Remaining with the quakes data set, calculate the mean and median magnitudes of the events that occurred at a depth of 300 km or deeper.
+c. Using the chickwts data set, write a for loop that gives you the mean weight of chicks for each feed type—the same as the results given by the tapply function in Section 13.2.1. Display the results rounded to one decimal place and, when printing, ensure each mean is labeled with the appropriate feed type.
+Another ready-to-use data set (in the automatically loaded datasets package) is InsectSprays. It contains data on the number of insects found on various agricultural units, as well as the type of insect spray that was used on each unit. Ensure you can access the data frame at the prompt; then study the help file ?InsectSprays to get an idea of R’s representation of the two variables.
+d. Identify the two variable types in InsectSprays (as per the defini- tions in Section 13.1.1 and Section 13.1.2).
+e. Calculate the modes of the distribution of insect counts, regard- less of spray type.
+f. Use tapply to report the total insect counts by each spray type.
+g. Using the same kind of for loop as in (c), compute the percent- age of agricultural units in each spray type group that had at least five bugs on them. When printing to the screen, round the percentages to the nearest whole number.
+h. Obtain the same numeric results as in (g), with rounding, but use tapply and a disposable function.
+
+b. Turn to the seismic event data in quakes and complete the follow- ing tasks:
+i. Find the IQR of the recorded depths.
+ii. Find the five-number summary of all magnitudes of seismic
+events that occur at a depth of 400 km or deeper. Compare this to the summary values found in Section 13.2.3 of those events occurring at less than 400 km and briefly comment on what you notice.
+iii. Use your knowledge of cut (Section 4.3.3) to create a new factor vector called depthcat that identifies four evenly spaced categories of quakes$depth so that when you use levels(depthcat), it gives the following:
+    R> levels(depthcat)
+    [1] "[40,200)"  "[200,360)" "[360,520)" "[520,680]"
+iv. Find the sample mean and standard deviation of the mag- nitudes of the events associated with each category of depth according to depthcat.
+Use tapply to compute the 0.8th quantile of the magnitudes of the seismic events in quakes, split by depthcat.
