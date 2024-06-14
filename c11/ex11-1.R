@@ -10,6 +10,26 @@
 # then myfib4 should return a vector. Confirm the correct results arise from
 # the following calls:
 
+
+# 10-4 factorial while loop
+mynum.fac <- 1
+while(mynum>1){
+  mynum.fac <- mynum.fac*mynum
+  mynum <- mynum-1
+}
+mynum.fac
+## end code
+
+
+#write the following:
+
+myfib4 <- function(thresh) {
+  # write yoour code here
+
+}
+
+
+
 myfib4(thresh=150,printme=TRUE) - myfib4(1000000,T)
 myfib4(150,FALSE)
 myfib4(1000000,printme=F)
