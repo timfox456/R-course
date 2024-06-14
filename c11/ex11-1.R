@@ -14,7 +14,7 @@
 
 #write the following:
 
-myfib4 <- function(thresh) {
+myfib4 <- function(thresh, printme) {
   # write yoour code here
 
 }
