@@ -9,6 +9,23 @@
 # a call to prog_test_fancy to execute. Set 50 as n, instruct the progress bar
 # (through the ellipsis) to use style=3, and set the bar character to be "r".
 
+
+# Original Version:
+
+prog_test <- function(n){
+    result <- 0
+    progbar <- txtProgressBar(min=0,max=n,style=1,char="=")
+    for(i in 1:n){
+        result <- result + 1
+        Sys.sleep(0.5)
+        setTxtProgressBar(progbar,value=i)
+    }
+    close(progbar)
+    return(result)
+}
+
+
+
 prog_test_fancy <- function(n,...){
   result <- 0
   progbar <- txtProgressBar(min=0,max=n,...)

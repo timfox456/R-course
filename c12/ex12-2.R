@@ -6,6 +6,32 @@
 # a call to prog_test_fancy to execute. Set 50 as n, instruct the progress bar
 # (through the ellipsis) to use style=3, and set the bar character to be "r".
 
+# Original Version:
+
+prog_test <- function(n){
+    result <- 0
+    progbar <- txtProgressBar(min=0,max=n,style=1,char="=")
+    for(i in 1:n){
+        result <- result + 1
+        Sys.sleep(0.5)
+        setTxtProgressBar(progbar,value=i)
+    }
+    close(progbar)
+    return(result)
+}
+
+
+# New Version
+
+prog_test_fancy <- function(n,...){
+
+  # Enter Code here
+}
+
+
+
+
+
 # b. In Section 12.1.2, you defined a function named myfibvectorTRY (which
 # itself calls myfibrec2 from Section 12.1.1) to return mul- tiple terms from
 # the Fibonacci sequence based on a supplied “term vector” nvec. Write a new
