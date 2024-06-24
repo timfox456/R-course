@@ -1,0 +1,12 @@
+# Ex 16-2
+
+# Every Saturday, at the same time, an individual stands by the side of a road
+# and tallies the number of cars going by within a 120-minute window. Based on
+# previous knowledge, she believes that the mean number of cars going by during
+# this time is exactly 107. Let X repre- sent the appropriate Poisson random
+# variable of the number of cars passing her position in each Saturday session.
+
+# a. What is the probability that more than 100 cars pass her on any given
+# Saturday?
+
+# b. Determine the probability that no cars pass.
