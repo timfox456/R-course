@@ -1,16 +1,47 @@
 ##########
 ## 18.2 ##
 ##########
-#(a)
+
+# In the package MASS you’ll find the data set anorexia, which contains data on
+# pre- and post-treatment weights (in pounds) of 72 young women suffering from
+# the disease, obtained from Hand et al. (1994). One group of women is the
+# control group (in other words, no inter- vention), and the other two groups
+# are the cognitive behavioral program and family support intervention program
+# groups. Load the library and ensure you can access the data frame and
+# understand its contents. Let μd denote the mean difference in weight,
+# computed as (post-weight − pre-weight).
+
+# a. Regardless of which treatment group the participants fall into, conduct
+# and conclude an appropriate hypothesis test with α = 0.05 for the entire set
+# of weights for the following hypotheses:
+
+# H0 : μd = 0 
+# HA : μd > 0
+
 library("MASS")
 ?anorexia
 t.test(anorexia[,3],anorexia[,2],alternative="greater",paired=TRUE)
 # p-value ~0.0023. Less than 0.05; some evidence to reject H0. There is evidence to suggest that the mean post-weight is greater than the mean pre-weight.
+
+# b. Next, conduct three separate hypothesis tests using the same defined
+# hypotheses, based on which treatment group the partici- pants fall into. What
+# do you notice?
+
 #(b)
 t.test(anorexia[anorexia$Treat=="Cont",3],anorexia[anorexia$Treat=="Cont",2],alternative="greater",paired=TRUE)
 t.test(anorexia[anorexia$Treat=="CBT",3],anorexia[anorexia$Treat=="CBT",2],alternative="greater",paired=TRUE)
 t.test(anorexia[anorexia$Treat=="FT",3],anorexia[anorexia$Treat=="FT",2],alternative="greater",paired=TRUE)
-# There is no statistical evidence to reject the claim that there is no difference between the pre- and post-weight means in the control group, mild evidence to reject at the 5% level for the CBL treatment, and strong evidence to reject in favor of HA for the FT treatment. It would seem that the FT treatment is the most effective based on these data.
+
+# Another ready-to-use data set in R is PlantGrowth (Dobson, 1983), which
+# records a continuous measure of the yields of a certain plant, looking at the
+# potential effect of two supplements administered during growth to increase
+# the yield when compared to a control group with no supplement.
+
+# c. Set up hypotheses to test whether the mean yield for the control group is
+# less than the mean yield from a plant given either of the treatments.
+# Determine whether this test should proceed using a pooled estimate of the
+# variance or whether Welch’s t-test would be more appropriate.
+
 #(c)
 ?PlantGrowth
 control <- PlantGrowth$weight[PlantGrowth$group=="ctrl"]
@@ -18,9 +49,42 @@ treated <- PlantGrowth$weight[PlantGrowth$group!="ctrl"]
 # H0: mu_control - mu_treated = 0; HA: mu_control - mu_treated < 0
 max(c(sd(control),sd(treated)))/min(c(sd(control),sd(treated)))
 # Ratio of (large sd) / (small sd) is less than 2 so use pooled variance according to rule-of-thumb.
+
+# d. Conduct the test and make a conclusion (assuming normality of the raw
+# observations).
 #(d)
 t.test(x=control,y=treated,alternative="less",var.equal=TRUE)
 # Large p-value ~0.41. There is no evidence to reject H0. There is insufficient evidence to conclude that the mean treated weight is more than the mean untreated weight.
+
+# There is no statistical evidence to reject the claim that there is no difference between the pre- and post-weight means in the control group, mild evidence to reject at the 5% level for the CBL treatment, and strong evidence to reject in favor of HA for the FT treatment. It would seem that the FT treatment is the most effective based on these data.
+
+
+# e. Your task is to write a wrapper function that calls t.test after deciding
+# whether it should be executed with var.equal=FALSE according to the rule of
+# thumb. Use the following guidelines:
+
+# – Your function should take four defined arguments: x and y with no defaults,
+# to be treated in the same way as the same arguments in t.test; and var.equal
+# and paired, with defaults that are the same as the defaults of t.test.
+
+# – An ellipsis (Section 9.2.5) should be included to represent any additional
+# arguments to be passed to t.test.
+
+# – Upon execution, the function should determine whether paired=FALSE.
+
+# If paired is TRUE, then there is no need to proceed with the check of a
+# pooled variance.
+
+# If paired is FALSE, then the function should determine the value for
+# var.equal automatically by using the rule of thumb.
+
+# – If the value of var.equal was set automatically, you can assume it will
+# override any value of this argument initially supplied by the user.
+
+# – Then, call t.test appropriately.
+
+
+
 #(e)
 myt.test <- function(x,y,paired=FALSE,var.equal=FALSE,...){	
   if(!paired){
@@ -32,6 +96,10 @@ myt.test <- function(x,y,paired=FALSE,var.equal=FALSE,...){
   }
   return(t.test(x=x,y=y,paired=paired,var.equal=var.equal,...))
 }
+
+# Try your new function on all three examples in the text of Sec- tion 18.2.2,
+# ensuring you reach identical results.
+
 #(f)
 # Example 1
 snacks <- c(87.7,80.01,77.28,78.76,81.52,74.2,80.71,79.5,77.87,81.94,80.7,82.32,
