@@ -1,5 +1,3 @@
-
-
 # Ex 17-2
 
 # A casual runner records the average time it takes him to sprint 100 meters.
@@ -7,21 +5,12 @@
 # the mean of these is 14.22 seconds. Assume that he knows the standard
 # deviation of his runs is σX = 2.9 seconds.
 
-x.bar <- 14.22
-sigma <- 2.9
-
 # a. Construct and interpret a 90 percent confidence interval for the true mean
 # time.
 
-#(a)
-x.bar+c(-1,1)*qnorm(0.95)*sigma/sqrt(34) # When sd is known, sampling distribution of sample mean is normal. 90% confident that the true mean run time lies somewhere between 13.40 and 15.04 seconds (rounded 2 d.p.)
-
-#(b)
 # b. Repeat (a), but this time, assume that the standard deviation is not known
 # and that s = 2.9 is estimated from the sample. How, if at all, does this
 # change the interval?
-
-x.bar+c(-1,1)*qt(0.95,df=33)*sigma/sqrt(34) # When sd is estimated from sample, sampling distribution is t with n-1 df. This means more extreme critical values and wider 90% CI when compared to normal version.
 
 
 # In a particular country, the true proportion of citizens who are left handed
@@ -33,18 +22,8 @@ x.bar+c(-1,1)*qt(0.95,df=33)*sigma/sqrt(34) # When sd is estimated from sample, 
 # c. Calculate and interpret a 99 percent CI for the true proportion of
 # left-handed-only citizens.
 
-#(c)
-p.hat <- 37/400
-p.hat
-p.hat+c(-1,1)*qnorm(0.995)*sqrt(p.hat*(1-p.hat)/400) # 99% confident that the true proportion of left-handedness only is somwhere between 0.055 and 0.130 (rounded 3 d.p.)
-
 # d. Calculate and interpret a 99 percent CI for the true proportion of
 # citizens who are either left-handed or ambidextrous.
-
-#(d)
-p.hat <- (37+11)/400
-p.hat
-p.hat+c(-1,1)*qnorm(0.995)*sqrt(p.hat*(1-p.hat)/400) # 99% confident that the true proportion of left-handed or ambidextrous citizens is somwhere between 0.078 and 0.162 (rounded 3 d.p.)
 
 # In Section 17.2.4, the technical interpretation of a CI with respect to its
 # confidence level was described as the proportion of many similar intervals
@@ -76,19 +55,6 @@ p.hat+c(-1,1)*qnorm(0.995)*sqrt(p.hat*(1-p.hat)/400) # 99% confident that the tr
 # column of the filled matrix. You should find that this proportion is close to
 # 0.95; this will vary ran- domly each time you rerun the loop.
 
-#(e)
-ci.mat <- matrix(NA,5000,3)
-n <- 300
-lambda.e <- 0.1
-mu <- 1/lambda.e
-for(i in 1:5000){
-  samp <- rexp(n,rate=lambda.e)
-  samp.ci <- mean(samp)+c(-1,1)*qt(0.975,n-1)*sd(samp)/sqrt(n)
-  ci.mat[i,1:2] <- samp.ci
-  ci.mat[i,3] <- mu>=samp.ci[1] && mu<=samp.ci[2]
-}
-mean(ci.mat[,3])
-
 # f. Create a plot that draws the first 100 of your estimated confi- dence
 # intervals as separate horizontal lines drawn from l to u, one on top of
 # another. One way to do this is to first create an empty plot with preset x-
@@ -97,10 +63,3 @@ mean(ci.mat[,3])
 # for loop). As a final touch, add to the plot a red vertical line that denotes
 # the true mean. Confidence intervals that do not include the true mean will
 # not intersect that vertical line.
-
-#(f)
-plot(ci.mat[1,1:2],c(1,1),xlim=range(ci.mat[,1:2]),ylim=c(1,100),type="l",xlab="",ylab="")
-for(i in 2:100){
-  lines(ci.mat[i,1:2],c(i,i))
-}
-abline(v=mu,col=2)
