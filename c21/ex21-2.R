@@ -8,6 +8,20 @@
 # other interesting examples, look at “Teaching Statistics with Data of
 # Historic Significance” by Dickey and Arnold (1995).
 
+
+ gal <- data.frame(d=c(573,534,495,451,395,337,253),h=c(1,0.8,0.6,0.45,0.3,0.2,0.1))
+
+#   d   h
+# 1 573 1.00
+# 2 534 0.80
+# 3 495 0.60
+# 4 451 0.45
+# 5 395 0.30
+# 6 337 0.20
+# 7 253 0.10
+
+
+
 # a. Create a data frame in R based on this table and plot the data points with
 # distance on the y-axis.
 
