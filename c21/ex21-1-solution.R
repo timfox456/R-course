@@ -14,9 +14,6 @@
 cats = read.csv("cats.csv")
 
 
-cats <- read.csv("cats.csv"0
-
-
 # a. Plot heart weight on the vertical axis and body weight on the horizontal
 # axis, using different colors or point characters to distinguish between male
 # and female cats. Annotate your plot with a legend and appropriate axis
