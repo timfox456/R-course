@@ -68,6 +68,7 @@ anova(gal.mod0,gal.mod1,gal.mod2,gal.mod3,gal.mod4)
 # terms) among waist, height, and hip; and a main effect for location.
 
 #(e)
+diabetes = read.csv("diabetes.csv")
 diab <- na.omit(diabetes[,c("chol","age","gender","height","weight","frame","waist","hip","location")])
 
 
