@@ -13,7 +13,9 @@
 # pipes to add_legend and add_axis to omit a legend title and to tidy up the
 # axis titles, respectively.
 library("ggvis")
-?Salaries
+
+Salaries = read.csv("salaries.csv", stringsAsFactors=TRUE)
+
 #(a)
 
 salfill <- input_radiobuttons(c("Rank"="rank","Discipline"="discipline","Sex"="sex"),map=as.name,label="Color points by...")

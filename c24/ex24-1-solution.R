@@ -18,7 +18,6 @@ UScereal = read.csv("uscereal.csv", stringsAsFactors=TRUE)
 
 library("ggplot2")
 #(a)
-UScereal = read.csv("usceral.csv", stringsAsFactor=TRUE)
 cereal <- UScereal
 new.mfr <- as.numeric(UScereal$mfr)
 new.mfr[new.mfr>2] <- 3
@@ -75,7 +74,8 @@ labs(x="Protein",y="Calories",col="Sugars",shape="Shelf",size="Sodium")
 # plot.
 
 #(e)
-library("car")
+Salaries <- read.csv("salaries.csv", stringsAsFactors=TRUE)
+
 gg1 <- ggplot(Salaries,aes(x=yrs.service,y=salary,col=sex)) + geom_point() + geom_smooth(method="loess") + labs(x="Years of Service",y="Salary",col="Sex")
 gg1
 #(f)
