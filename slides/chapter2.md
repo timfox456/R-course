@@ -17,7 +17,7 @@ quotient <- 5 / 3
 
 ---
 
-## Logarithms and exponentials
+## Logarithms and Exponentials
 
  * The `log` function can do logarithms
  * the `exp` function can do exponents

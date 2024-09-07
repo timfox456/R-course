@@ -1,4 +1,4 @@
-# Chapter 1: Installing adnd Using R
+# Chapter 1: Installing and Using R
 
 ---
 
