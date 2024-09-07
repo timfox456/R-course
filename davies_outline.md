@@ -355,6 +355,41 @@
    - Mathematical Expressions
  * A Fully Annoated Scatterplot
 
+## Chapter 24: Going Further with the Grammar of Graphics
+ * `ggplot` or `qplot`?
+ * Smoothing and Shading
+   - Adding LOESS Trends
+   - Constructing Smooth Density Estimates
+ * Multiple Plots and Variable-Mapped Facets
+   - Independent Plots
+   - Facets mapped to a categorical variable
+ * Interactive tools in `ggvis`
+
+## Chapter 25: Defining Colors and Plotting in Higher Dimensions
+ * Represnting and Using Color
+   - Red-Green-Blue Hexadecimal Color Codes
+   - Built-in Pallettes
+   - Custom Palettes
+   - Using Color Palettes to Index a Continuum
+   - Including a Color Legend
+   - Opacity
+   - RGB Alternatives and Further Functionality
+ * 3D Scatterplots
+   - Basic Syntax
+   - Visual Enhancements
+ * Preparing a Surface for Plotting
+   - Constructing an Evaluation Grid
+   - Constructing the z-Matrix
+   - Conceptualizting the z-Matrix
+ * Contour Plots
+   - Drawing Countour lines
+   - Color-Filled Contours
+ * Pixel Images
+   - One Grid Point = One Pixel
+   - Surface Truncation and Empty Pixels
+ * Perspective Plots
+
+
 
 
 
