@@ -3,6 +3,10 @@
 
 This is materials for the R course
 
+## Outline
+
+[Outine](./davies_outline.md)
+
 
 ## Chapters
 
