@@ -213,13 +213,13 @@
    - Continuous Random Variables
    - Slope, Skew, and Modality
 
-## Chapter 16: Common Probablity Distributions
+## Chapter 16: Common Probability Distributions
  * Common Probability Mass Functions
    - Bernoulli Distribution
    - Binomial Distribution
    - Poisson Distribution
    - Other Mass Function
- * Common Proablity Density Functions
+ * Common Probability Density Functions
    - Uniform
    - Normal
    - Student's t-distribution
@@ -230,7 +230,7 @@
  * Sampling Distributions
    - Distribution for a Sample Mean
    - Distribution for a Sample Proportion
-   - Sampling Distributions for other statitics
+   - Sampling Distributions for other statistics
  * Confidence Intervals
    - An interval for a mean
    - An interval for a proportion
@@ -240,19 +240,19 @@
 ## Chapter 18: Hypothesis Testing 
  * Components of a Hypothesis Test
    - Hypotheses
-   - Test statisitcs
+   - Test statistics
    - p-value
    - Significance Level
-   - Criticisms of hypothesis tesing
+   - Criticisms of hypothesis teasing
  * Testing means
    - Single Mean
-   - Two menas
+   - Two means
  * Testing proportions
    - Single proportions 
    - Two proportions
  * Testing Categorical Variables
    - Single categorical variable
-   - Two Catgorical Variables
+   - Two Categorical Variables
  * Errors and Power
    - Hypothesis Test Errors
    - Type I Errors
@@ -262,7 +262,7 @@
 ## Chapter 19: Analysis of Variance
  * One Way ANOVA
    - Hypothesis and Diagnostic checking
-   - One way ANOVA Table Consgructions
+   - One way ANOVA Table Constructions
    - Building ANOVA Tables and the `aov` function
  * Two Way ANOVA
    - A suite of hypotheses
@@ -273,12 +273,12 @@
  * An Example of a Linear Relationship
  * General Concepts
    - Definition of the Model
-   - Estimated the Intercept and Slope Paramters
+   - Estimated the Intercept and Slope Parameters
    - Fitting Linear Models with `lm`
    - Illustrating residuals
  * Statistical Inference
    - Summarizing the Filled Models
-   - Regression Coefficient Signiciance Tests
+   - Regression Coefficient Significance Tests
    - Coefficient of Determination
    - Other Summary Output
  * Understanding Categorical Predictors
@@ -332,7 +332,7 @@
 
 
 ## Chapter 23: Advanced Plot Customization
- * Handling the Grpahics Device
+ * Handling the Graphics Device
    - Manually Opening a New Device
    - Switching Between Devices
    - Closing a Device 
@@ -342,18 +342,18 @@
    - Custom Spaces
    - Clipping
  * Point and Click Coordinate Interaction
-   - Retriving Coordinates Silently
+   - Retrieving Coordinates Silently
    - Visualizing Selected Coordinates
    - Ad-Hoc Annotation
  * Customizing Traditional R Plots
-   - Graphical Parameters for Style and Surpriession
+   - Graphical Parameters for Style and Suppression
    - Customizing boxes
    - Customizing axes
  * Specialized Text and Label Notation
    - font
    - Greek symbols
    - Mathematical Expressions
- * A Fully Annoated Scatterplot
+ * A Fully Annotated Scatterplots
 
 ## Chapter 24: Going Further with the Grammar of Graphics
  * `ggplot` or `qplot`?
@@ -366,9 +366,9 @@
  * Interactive tools in `ggvis`
 
 ## Chapter 25: Defining Colors and Plotting in Higher Dimensions
- * Represnting and Using Color
+ * Representing and Using Color
    - Red-Green-Blue Hexadecimal Color Codes
-   - Built-in Pallettes
+   - Built-in Palettes
    - Custom Palettes
    - Using Color Palettes to Index a Continuum
    - Including a Color Legend
@@ -380,9 +380,9 @@
  * Preparing a Surface for Plotting
    - Constructing an Evaluation Grid
    - Constructing the z-Matrix
-   - Conceptualizting the z-Matrix
+   - Conceptualizing the z-Matrix
  * Contour Plots
-   - Drawing Countour lines
+   - Drawing Contour lines
    - Color-Filled Contours
  * Pixel Images
    - One Grid Point = One Pixel
