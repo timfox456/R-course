@@ -17,6 +17,6 @@
 # e. Store the bottom four elements of (c) as a new 2 × 2 matrix.
 
 
-# f. Overwrite, in this order, the elements of (c) at positions (4,2), (1,2), (4,1), and (1,1) with −12 of the two values on the diagonal of (e).
+# f. Overwrite, in this order, the elements of (c) at positions (4,2), (1,2), (4,1), and (1,1) with −0.5 times the two values on the diagonal of (e).
 
   

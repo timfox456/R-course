@@ -28,7 +28,7 @@ matrix(data=mymat[-4,-1])
 mymat2 <- mymat[3:4,]
 mymat2
 
-# f. Overwrite, in this order, the elements of (c) at positions (4,2), (1,2), (4,1), and (1,1) with −12 of the two values on the diagonal of (e).
+# f. Overwrite, in this order, the elements of (c) at positions (4,2), (1,2), (4,1), and (1,1) with −0.5 of the two values on the diagonal of (e).
 
 mymat[c(4,1),2:1] <- -0.5*diag(mymat2)
 
