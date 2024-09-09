@@ -23,7 +23,7 @@
 ![](../img/lab02-04-loaded-file.png)
 
 
-### Step 5: Press the "Run" button to run a single line of code
+### Step 5: Compose the following lines of code according to the instructions
 
 First compose the code as shown: (on lines 8,9)
 
@@ -34,8 +34,11 @@ print((6 * a + 42)/(3^(4.2-3.62)))
 ```
 
 
+### Step 6: Press the "Run" button to run a single line of code
 
-Press the run button once
+Ensure the cursor is on line 8" `a = 2.3`
+
+Press the run button once:
 ![](../img/lab02-05-run-line.png)
 
 You should see the console below echo the value
@@ -49,11 +52,20 @@ You should see the following show up in the "Environment" tab in the upper left:
 ![](../img/lab02-07-environment.png)
 
 
+### Step 7: Run the second line of code (line 9)
+
+Ensrue the cursor is on line 9
+
+Again press the "run" button as you did in the previous step.
+
+
 Here is what it looks like when you have run those lines:
 
 ![](../img/lab02-06-lines-run.png)
 
-You should see the response in the console
+
+Note that you see the response in the console below.  Here is what it looks like:
+
 
 ```console
 > print((6 * a + 42)/(3^(4.2-3.62)))
@@ -63,7 +75,7 @@ You should see the response in the console
 Ignore the `[1]` for now, we will explain that later.
 
 
-##  Chapter 2 Source Code (referrnece)
+##  Chapter 2 Source Code (refernece)
 
 ### Section 2.1 
 
