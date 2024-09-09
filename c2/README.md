@@ -1,8 +1,71 @@
 # Chapter 2
 
-# Chapter 2 Source Code
 
-## Section 2.1 
+## Getting Started 
+
+
+### Step 1: Set working Directory to directory `c2`
+
+![](../img/lab02-01-setwd-c2.png)
+
+### Step 2: Go to the open file dialog
+
+![](../img/lab02-02-open-file.png)
+
+
+### Step 3: Select the file `ex2-1.R`
+
+![](../img/lab02-03-select-file.png)
+
+
+### Step 4: Observe the loaded file in Rstudio
+
+![](../img/lab02-04-loaded-file.png)
+
+
+### Step 5: Press the "Run" button to run a single line of code
+
+First compose the code as shown: (on lines 8,9)
+
+```R
+a = 2.3
+print((6 * a + 42)/(3^(4.2-3.62)))
+
+```
+
+
+
+Press the run button once
+![](../img/lab02-05-run-line.png)
+
+You should see the console below echo the value
+
+```console
+> a = 2.3
+```
+
+You should see the following show up in the "Environment" tab in the upper left:
+
+![](../img/lab02-07-environment.png)
+
+
+Here is what it looks like when you have run those lines:
+
+![](../img/lab02-06-lines-run.png)
+
+You should see the response in the console
+
+```console
+> print((6 * a + 42)/(3^(4.2-3.62)))
+[1] 29.50556
+```
+
+Ignore the `[1]` for now, we will explain that later.
+
+
+##  Chapter 2 Source Code (referrnece)
+
+### Section 2.1 
 
 ###  2.1.1
 
