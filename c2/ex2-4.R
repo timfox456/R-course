@@ -4,7 +4,7 @@
 # a. Create and store a vector that contains the following, in this order:
 #    – A sequence of length 5 from 3 to 6 (inclusive)
 #    – A twofold repetition of the vector c(2,-5.1,-33)
-#    – The value 7+2 42
+#    – The value (7/42)+2
 
 
 # b. Extract the first and last elements of your vector from (a), storing them as a new object.
