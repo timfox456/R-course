@@ -36,7 +36,7 @@ print((6 * a + 42)/(3^(4.2-3.62)))
 
 ### Step 6: Press the "Run" button to run a single line of code
 
-Ensure the cursor is on line 8" `a = 2.3`
+Ensure the cursor is on line 8: `a = 2.3`
 
 Press the run button once:
 ![](../img/lab02-05-run-line.png)
