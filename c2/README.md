@@ -75,6 +75,35 @@ Note that you see the response in the console below.  Here is what it looks like
 Ignore the `[1]` for now, we will explain that later.
 
 
+### Step 8: Complete the Exercises, referring to the solution if need be.
+
+Go ahead and complete the exercises fond on [Exercise 2-1](ex2-1.R) in the 
+RStudio editor.  You are encouraged to refer to the [Exercise 2-1 Solution](ex2-1-solution.R).
+
+You will notice that the solution for Exercise 2-1 is as follows:
+
+```R
+#########
+## 2.1 ##
+#########
+#(a)
+(6*2.3+42)/(3^(4.2-3.62))
+#(b)
+(-4)^2+2
+#(c)
+sqrt(x=0.5*((25.2+15+16.44+15.3+18.6)/5))
+#(d)
+log(x=0.3)
+#(e)
+exp(x=-1.203973)
+#(f)
+-0.00000000423546322
+```
+
+Each one of these is the "answer" for the questions in the exercise.
+
+
+
 ##  Chapter 2 Source Code (refernece)
 
 ### Section 2.1 
