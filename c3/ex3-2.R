@@ -39,13 +39,13 @@
 
 # i. A·B
 
-# ii. A⊤·B
+# ii. t(A)·B
 
-# iii. B⊤·(A·A⊤)
+# iii. t(B)·(A·t(A))
 
-# iv. (A·A⊤)·B⊤
+# iv. (A·t(A))·t(B)
 
-# v. [(B·B⊤)+(A·A⊤)−100I3]−1
+# v. [(B·t(B)+(A·t(A))−100 diag(3)]−1
 
 
 
@@ -59,5 +59,5 @@
 # [3,]    0    0    5    0
 # [4,]    0    0    0   -1
 
-# confirm that A−1 · A − I4 provides a 4 × 4 matrix of zeros.
+# confirm that solve(A) · A − diag(4) provides a 4 × 4 matrix of zeros.
 
