@@ -29,6 +29,34 @@
 # age.mon variable in Section 5.2.2. Create a new version of mydata called
 # mydata2 by deleting the age.mon column.
 
+
+# > mydata
+#   person age sex age.mon funny
+# 1  Peter  42   M     504  High
+# 2   Lois  40   F     480  High
+# 3    Meg  17   F     204   Low
+# 4  Chris  14   M     168   Med
+# 5 Stewie   1   M      12  High
+# 6  Brian   7   M      84   Med
+
+
+
+# These are the mydata as it existed in the boo
+mydata <- data.frame(person=c("Peter","Lois","Meg","Chris","Stewie"),
+                     age=c(42,40,17,14,1), 
+                     sex=factor(c("M","F","F","M","M")),
+                     stringsAsFactors=FALSE)
+newrecord <- data.frame(person="Brian",age=7,
+                           sex=factor("M",levels=levels(mydata$sex)))
+mydata <- rbind(mydata,newrecord)
+mydata$age.mon <- mydata$age * 12
+funny <- c("High","High","Low","Med","High","Med")
+funny <- factor(x=funny,levels=c("Low","Med","High"))
+mydata <- cbind(mydata, funny)
+
+# Now create mydata2 as asked.
+
+
 # e. Now, combine mydata2 with dframe, naming the resulting object mydataframe.
 
 # f. Write a single line of code that will extract from mydataframe just the
