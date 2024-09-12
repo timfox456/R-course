@@ -14,11 +14,43 @@
 # the following calls:
 
 
+
 #write the following:
 
 myfib4 <- function(thresh,printme) {
   # write yoour code here
 
+}
+
+# For your reference, here is the myfib2 and myfib3 functions from the book
+
+myfib2 <- function(thresh) {  #myfib2 from the book
+  fib.a <- 1
+  fib.b <- 1
+  cat(fib.a,", ",fib.b,", ",sep="")
+  repeat {
+    temp <- fib.a+fib.b
+    fib.a <- fib.b
+    fib.b <- temp
+    cat(fib.b,", ",sep="")
+    if(fib.b>thresh){
+       cat("BREAK NOW...")
+       break 
+    }
+  } 
+}
+
+myfib3 <- function(thresh) { # myfib3 from the book
+  fibseq <- c(1,1)
+  counter <- 2
+  repeat {
+    fibseq <- c(fibseq,fibseq[counter-1]+fibseq[counter])
+     counter <- counter+1
+     if(fibseq[counter]>thresh){
+       break 
+     }
+  }
+  return(fibseq)
 }
 
 

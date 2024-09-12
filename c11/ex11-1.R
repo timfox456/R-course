@@ -20,6 +20,40 @@ myfib4 <- function(thresh, printme) {
 }
 
 
+# For your reference, here is the myfib2 and myfib3 functions from the book
+
+myfib2 <- function(thresh) {  #myfib2 from the book
+  fib.a <- 1
+  fib.b <- 1
+  cat(fib.a,", ",fib.b,", ",sep="")
+  repeat {
+    temp <- fib.a+fib.b
+    fib.a <- fib.b
+    fib.b <- temp
+    cat(fib.b,", ",sep="")
+    if(fib.b>thresh){
+       cat("BREAK NOW...")
+       break
+    }
+  }
+}
+
+myfib3 <- function(thresh) { # myfib3 from the book
+  fibseq <- c(1,1)
+  counter <- 2
+  repeat {
+    fibseq <- c(fibseq,fibseq[counter-1]+fibseq[counter])
+     counter <- counter+1
+     if(fibseq[counter]>thresh){
+       break
+     }
+  }
+  return(fibseq)
+}
+
+
+
+# Here is how you should call myfib4
 
 myfib4(thresh=150,printme=TRUE) - myfib4(1000000,T)
 myfib4(150,FALSE)
@@ -50,3 +84,5 @@ mynum.fac
 # time, you may still assume int will be supplied as an integer but not that it
 # will be non-negative. If negative, the function should return NaN. Test
 # myfac2 on the same three values as previously, but also try using int=-6.
+
+
