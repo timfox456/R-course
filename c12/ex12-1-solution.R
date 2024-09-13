@@ -121,7 +121,7 @@ matinv <- function(x,noninv=NA,nonmat="not a matrix",silent=TRUE){
   for(i in 1:n){
     if(is.matrix(x[[i]])){
       attempt <- try(solve(x[[i]]),silent=silent)
-      if(class(attempt)=="try-error"){
+      if(length(attempt) == 1 && class(attempt)=="try-error"){
         x[[i]] <- noninv
       } else {
         x[[i]] <- attempt
