@@ -70,6 +70,24 @@ myfibrec2 <- function(n){
   }
 }
 
+
+
+myfibvectorTRY <- function(nvec){
+  nterms <- length(nvec)
+  result <- rep(0,nterms)
+  for(i in 1:nterms){
+    attempt <- try(myfibrec2(nvec[i]),silent=T)
+    if(class(attempt)=="try-error"){
+       result[i] <- NA
+    } else{
+       result[i] <- attempt
+    }
+  }
+  return(result)
+}
+
+
+
 myfibvectorTRY2 <- function(nvec){
   nterms <- length(nvec)
   result <- rep(0,nterms)

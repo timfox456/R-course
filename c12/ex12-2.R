@@ -34,10 +34,44 @@ prog_test_fancy <- function(n,...){
 
 # b. In Section 12.1.2, you defined a function named myfibvectorTRY (which
 # itself calls myfibrec2 from Section 12.1.1) to return mul- tiple terms from
-# the Fibonacci sequence based on a supplied “term vector” nvec. Write a new
-# version of myfibvectorTRY that includes a progress bar of style=3 and a
-# character of your choos- ing that increments at each pass of the internal for
-# loop. Then, do the following:
+# the Fibonacci sequence based on a supplied “term vector” nvec. 
+
+
+myfibrec2 <- function(n){
+  if(n<0){
+    warning("Assuming you meant 'n' to be positive -- doing that instead")
+    n <- n*-1
+  } else if(n==0){
+    stop("'n' is uninterpretable at 0")
+  }
+
+  if(n==1||n==2){
+    return(1)
+  } else {
+    return(myfibrec2(n-1)+myfibrec2(n-2))
+  }
+}
+
+
+myfibvectorTRY <- function(nvec){
+  nterms <- length(nvec)
+  result <- rep(0,nterms)
+  for(i in 1:nterms){
+    attempt <- try(myfibrec2(nvec[i]),silent=T)
+    if(class(attempt)=="try-error"){
+       result[i] <- NA 
+    } else{
+       result[i] <- attempt
+    }
+  }
+  return(result)
+}
+
+
+
+# Write a new version of myfibvectorTRY that includes a progress bar of style=3
+# and a character of your choos- ing that increments at each pass of the
+# internal for loop. Then, do the following:
 
 # i. Use your new function to reproduce the results from the text where
 
