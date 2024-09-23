@@ -10,3 +10,11 @@
 # Saturday?
 
 # b. Determine the probability that no cars pass.
+
+# c. Plot the relevant Poisson mass function over the values 60 <= x <= 150
+
+# d. Simulate 260 results from this distribution (about 5 years of weekly
+# Saturday morning session). Plot the simulated results using hist, use 
+# xlim to set the horizontal limits from 60 to 150. Compare your histogram
+# to the shape of your mass function from part (c).
+
