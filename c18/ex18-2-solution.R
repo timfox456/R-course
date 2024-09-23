@@ -18,8 +18,7 @@
 # H0 : μd = 0 
 # HA : μd > 0
 
-library("MASS")
-?anorexia
+anorexia = read.csv("anorexia.csv")
 t.test(anorexia[,3],anorexia[,2],alternative="greater",paired=TRUE)
 # p-value ~0.0023. Less than 0.05; some evidence to reject H0. There is evidence to suggest that the mean post-weight is greater than the mean pre-weight.
 
